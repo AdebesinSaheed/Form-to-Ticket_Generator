@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: 
+    url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+    url("assets/images/pattern-lines.svg"), 
+    url("assets/images/background-mobile.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left bottom, center, center;
+    background-size: 450px auto, contain, cover;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+.logo {
+    display: inline-block;
+}
+.top-right-svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: auto;
+    width: 100px;
+}
+.bot-left-svg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+.bot-left-svg img {
+    height: 260px;
+    width: auto;
+}
+.attribution { 
+    font-size: 11px; text-align: center; 
+    margin-top: 15px;
+}
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+}
+header {
+    text-align: center;
+    margin-top:35px;
+    position: relative;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 300px;
+    text-align: center;
+    margin: 40px auto;
+}
+.hero h2, 
+.hero h3, 
+.hero h4  {
+    color: hsl(252, 6%, 83%);
+}
+.hero h2 {
+    color: #fff;
+}
+label {
+    color: #fff;
+    display: block;
+    width: 80%;
+    margin: 0 auto 8px;
+}
+.upload-label {
+    border: 2px dashed hsl(252, 6%, 83%);
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto 15px;
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+.photo-upload {
+    display: flex;
+    gap: 10px;
+    margin:0 auto 20px;
+    width: 80%;
+    color: hsl(252, 6%, 83%);
+    font-weight: 200;
+}
+input[type="text"],
+input[type="email"] {
+    display: block;
+    background-color: transparent;
+    opacity: 0.5;
+    border: 1px solid hsl(252, 6%, 83%);
+    margin: 0 auto 15px;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+}
+input::placeholder {
+    font-size: 20px;
+    color: hsl(252, 6%, 83%);
+}
+input[type="submit"] {
+    width: 80%;
+    display: block;
+    padding: 20px;
+    cursor: pointer;
+    margin: 0 auto 15px;
+    color: hsl(248, 70%, 10%);
+    font-size: 16px;
+    font-weight: 500;
+}
+.submitBtn {
+    background-color: hsl(7, 88%, 67%);
+    width: 80%;
+    margin-left: 15px;
+    border: none;
+    border-radius: 10px;
+}
+/** creating card **/
+.card-frame {
+    position:relative;
+    display:none;
+}
+.card {
+    width: 95%;
+    max-width: 350px;
+    margin:auto;
+    display: none;
+    position: relative;
+    display: inline-block;
+}
+#card {
+    position: relative;
+    margin-top: 40px;
+}
+.card .ticket-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.card .ticket-logo {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-90%);
+  width: auto;
+  height: 24px;
+  pointer-events: none;
+  z-index: 10;
+}
+.ticket-message {
+    margin-top: 40px;
+    color: #fff;
+    text-align: center;
+}
+.ticket-message h2, .ticket-message h4 {
+    margin: 15px 0;
+    line-height: 1.4;
+}
+.ticket-avatar {
+    width: 70px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 5;
+}
+.avatar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    max-width: calc(100% - 40px);
+
+}
+#avatar-span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+#gname-display {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.2;
+}
+.gradient-name {
+    background: linear-gradient(
+        90deg,
+        hsl(7, 86%, 67%),
+        hsl(0, 0%, 100%)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+    color: transparent;
+    
+}
+#fname-display h3 {
+    background: linear-gradient(
+        90deg,
+        hsl(7, 86%, 67%),
+        hsl(0, 0%, 100%)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+    color: transparent;
+}
+
+
+@media only screen and (min-width:1200px) {
+    form label,
+    form .form-label,
+    form .upload-label,
+    form input[type="text"],
+    form input[type="email"],
+    form .submitBtn {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    form .photo-upload {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        gap: 10px;
+    }
+    form .upload-label {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .hero {
+        max-width: 1200px;
+        width: 55%;
+    }
+    .hero h2 {
+        max-width: 100%;
+        font-size: 2.5em;
+    }
+    .hero h4 {
+        max-width: 100%;
+        font-size: 1.2em;
+    }
+    header .top-right-svg {
+        width: 200px;
+        height: auto;
+    }
+}

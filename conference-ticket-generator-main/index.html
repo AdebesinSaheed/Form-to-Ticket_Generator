@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="ticket.css">
+  
+
+  
+  <title>Frontend Mentor | Conference ticket generator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!--<style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+
+  <!-- Form starts -->
+
+<header>
+  <img src="assets/images/logo-full.svg" alt="logo-full" class="logo">
+  <img src="assets/images/pattern-squiggly-line-top.svg" class="top-right-svg">
+</header>
+<div id="pagecontent">
+<section class="hero">
+  <h2>Your Journey to Coding Conf 2025 Starts Here!</h2>
+  <h4>Secure your spot at next year's biggest coding conference.</h4>
+</section>
+  
+<form class="wrapper" id="myForm">
+  <label for="avatar" class="form-label">Upload Avatar</label>
+  <label for="avatar" class="upload-label">
+  <img src="assets/images/icon-upload.svg" alt="upload">
+  Drag and drop or click to upload
+  <input type="file" id="avatar" name="avatar" accept="image/*" hidden>
+  </label>
+  <div class="photo-upload">
+    <img src="assets/images/icon-info.svg" alt="icon-info">
+    <h5>Upload your photo (JPG or PNG, max size: 500KB).</h5>
+  </div>
+
+  <label for="fname">Full Name</label>
+  <input type="text" name="fname" id="fname" required>
+
+  <label for="email">Email Address</label>
+  <input type="email" name="email" id="email" placeholder="example@email.com" required>
+
+  <label for="uname">GitHub Username</label>
+  <input type="text" name="uname" id="uname" placeholder="@yourusername" required>
+
+  <input type="submit" name="send" id="send" class="submitBtn" value="Generate My Ticket">
+
+</form>
+</div>
+
+
+
+
+
+<div class="card-frame" id="card-frame">
+  <div class="ticket-message" id="ticket-message"></div>
+  <div class="card" id="card">
+    <img src="assets/images/pattern-ticket.svg" alt="Ticket" class="ticket-bg">
+    <div class="avatar-wrapper">
+    <img id="ticket-avatar" class="ticket-avatar" src="" alt="Attendee photo">
+    <div id="avatar-span">
+      <div id="fname-display"></div>
+      <div id="gname-display"></div>
+    </div>
+  </div>
+  </div>
+</div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Adebesin Saheed</a>.
+  </div>
+    <script src="ticket.js"></script>
+</body>
+</html>
